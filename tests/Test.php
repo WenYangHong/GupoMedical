@@ -10,7 +10,3 @@ $app = new \GupoMedical\Application([
 //        'Timestamp' => 1623395946000
     ]
 ]);
-var_dump($app->inpatient->getList([
-    'size' => 2,
-    'permission_code' => 'A'
-]));

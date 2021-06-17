@@ -12,11 +12,13 @@ use Pimple\Container;
  * @package GupoMedical
  *
  * @property \GupoMedical\Inpatient\Client $inpatient
+ * @property \GupoMedical\Outpatient\Client $outpatient
  */
 class Application extends Container
 {
     protected $providers = [
-        Inpatient\ServiceProvider::class
+        Inpatient\ServiceProvider::class,
+        Outpatient\ServiceProvider::class
     ];
 
     public function __construct(array $config = [], array $values = [])
