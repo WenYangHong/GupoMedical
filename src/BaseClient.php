@@ -15,7 +15,7 @@ class BaseClient
     {
         $this->app = $app;
         if (!$this->app['config']->get('hid') || !$this->app['config']->get('base_url')) {
-            throw new \Exception('缺少hid或base_url');
+            return ['code' => 404, 'errMsg' => '缺少hid或base_url'];
         }
         $this->base_url = $this->app['config']->get('base_url');
         $this->client = new Client(['base_uri' => $this->base_url]);
